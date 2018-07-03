@@ -36,7 +36,7 @@ def main():
 			print path
 			os.chdir(path)
 			os.system('git checkout ' + branch)
-			os.system('pwd')
+			##os.system('pwd')
 			##print('git tag -a ' + tagname + ' -m ' + comment + codecommit)
 			os.system('git tag -a ' + tagname + ' -m ' + comment + codecommit)
 

@@ -48,5 +48,6 @@ def main():
 			##print match[0]
 			os.system('git push ' + match[0] + ' --tags')
 
+
 if __name__ == '__main__':
 	main()

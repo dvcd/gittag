@@ -47,6 +47,7 @@ def main():
 			match = re.split(r'[\s]', pushline)
 			##print match[0]
 			os.system('git push ' + match[0] + ' --tags')
+	taglistfile.close()
 
 
 if __name__ == '__main__':

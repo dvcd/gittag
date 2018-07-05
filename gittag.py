@@ -1,17 +1,14 @@
 import os
 import re
 
-parentdir = '/home/user/tag/'
-
 def main():
-	global parentdir
 	list = []
 	with open('taglist', 'r') as taglistfile:
 		all_content=taglistfile.read()
 		print all_content
 		list = all_content.split('item\n')
 		print list
-		for item in list:
+s		for item in list:
 			if item == '':
 				print item
 				continue
@@ -21,6 +18,8 @@ def main():
 				if not line:
 					break
 				key, value = line.split(':')
+				if key=='basedir':
+					basedir = value
 				if key=='directory':
 					directory = value
 				elif key=='branchname':
@@ -32,7 +31,7 @@ def main():
 				elif key=='comment':
 					comment = value
 			print directory, branch, codecommit, tagname, comment
-			path = parentdir + directory
+			path = basedir + directory
 			print path
 			os.chdir(path)
 			os.system('git checkout ' + branch)
@@ -46,7 +45,7 @@ def main():
 			##print pushline
 			match = re.split(r'[\s]', pushline)
 			##print match[0]
-			os.system('git push ' + match[0] + ' --tags')
+			os.system('git push ' + match[0] + ' ' + tagname)
 	taglistfile.close()
 
 

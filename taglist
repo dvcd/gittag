@@ -1,10 +1,12 @@
 item
+basedir:/home/user/tag/
 directory:SLAM/algorithm_vehicle
 branchname:feature/RDB-27671-offlineslam-backup-for-audi-demo-0621
 commitname:b40f2c2
 tagname:APA-0.3-SLAM
 comment:"tag test for Audi Release"
 item
+basedir:/home/user/tag/
 directory:LogicDB/common
 branchname:master
 commitname:61e4f9dd64e93abe2890557a5671176190b37b6e

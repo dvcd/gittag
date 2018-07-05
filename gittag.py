@@ -6,7 +6,7 @@ parentdir = '/home/user/tag/'
 def main():
 	global parentdir
 	list = []
-	with open('taglist.txt', 'r') as taglistfile:
+	with open('taglist', 'r') as taglistfile:
 		all_content=taglistfile.read()
 		print all_content
 		list = all_content.split('item\n')
